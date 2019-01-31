@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{ABBF1B7F-A980-82D7-82E4-46DB4AF85F9E}") = "Talk to The Dead", "Assembly-CSharp-firstpass.csproj", "{8DCEF521-C38B-38DD-2104-30A2C425974F}"
+EndProject
+Project("{ABBF1B7F-A980-82D7-82E4-46DB4AF85F9E}") = "Talk to The Dead", "Assembly-CSharp.csproj", "{475A7676-BF60-7244-839B-2A3C80156640}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DCEF521-C38B-38DD-2104-30A2C425974F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCEF521-C38B-38DD-2104-30A2C425974F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCEF521-C38B-38DD-2104-30A2C425974F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCEF521-C38B-38DD-2104-30A2C425974F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{475A7676-BF60-7244-839B-2A3C80156640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{475A7676-BF60-7244-839B-2A3C80156640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{475A7676-BF60-7244-839B-2A3C80156640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{475A7676-BF60-7244-839B-2A3C80156640}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
