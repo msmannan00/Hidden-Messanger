@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/LENOVO/Desktop/Finkjjal.apk
+C:/Users/LENOVO/Desktop/Final.apk
 SceneListBegin?
 Assets/Scene/Activity_1.unity
 SceneListEnd?
@@ -144,7 +144,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
-25f23f1068a85b310b157d710f2e167a Assembly-CSharp.dll:.sceneManager
+95acbc8bf51e868cdb4a1da4404a9b49 Assembly-CSharp.dll:.sceneManager
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 cf96e5f7b3d069bab453925bd41be04e UnityEngine.TestRunner.dll:UnityEngine.TestTools.EnumerableSetUpTearDownCommandState

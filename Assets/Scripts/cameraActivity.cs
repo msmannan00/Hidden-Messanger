@@ -14,6 +14,7 @@ public class cameraActivity : MonoBehaviour
     /*Private Variables*/
     RawImage backupRawimage;
     Thread thread;
+    Quaternion baseRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +43,27 @@ public class cameraActivity : MonoBehaviour
                 backupRawimage = rawimage;
                 isInitialized = true;
                 webcamTexture = new WebCamTexture();
+
+                // Checks how many and which cameras are available on the device
+                for (int cameraIndex = 0; cameraIndex < WebCamTexture.devices.Length; cameraIndex++)
+                {
+                    // We want the back camera
+                    if (!WebCamTexture.devices[cameraIndex].isFrontFacing)
+                    {
+                        webcamTexture = new WebCamTexture(cameraIndex, Screen.width, Screen.height);
+                        baseRotation = rawimage.transform.rotation;
+                    }
+
+                }
             }
             rawimage.texture = webcamTexture;
-            rawimage.material.mainTexture = webcamTexture;
+            int width = Screen.width - (10 / Screen.width) * 100;
+            float prevRect = rawimage.rectTransform.position.y;
+            RectTransform transform = rawimage.rectTransform;
+            transform.sizeDelta = new Vector2(width, width);
+            prevRect = prevRect - width;
+            transform.position = new Vector3(transform.position.x, transform.position.y + prevRect, transform.position.z);
+
             webcamTexture.Play();
         }
     }
@@ -52,8 +71,8 @@ public class cameraActivity : MonoBehaviour
     void OnDisable()
     {
         webcamTexture.Stop();
+
         rawimage.texture = null;
-        rawimage.material.mainTexture = null;
     }
 
 

@@ -10,6 +10,8 @@ public class sceneManager : MonoBehaviour {
     public GameObject[] pages;
     public Image topFader;
     public GameObject splashScreen;
+    public Text response_text;
+    public Image responseImage;
 
     /*Local Variables*/
     int selectedGridIndex = 0;
@@ -44,9 +46,15 @@ public class sceneManager : MonoBehaviour {
     /*Helper Methods*/
     public void Load_Page(int page)
     {
-        showAd(page);
         if (page==11)
         {
+            if (!UnityEngine.Android.Permission.HasUserAuthorizedPermission(UnityEngine.Android.Permission.Camera))
+            {
+                responseEnable();
+                responseDisable();
+                UnityEngine.Android.Permission.RequestUserPermission(UnityEngine.Android.Permission.Camera);
+                return;
+            }
             topFader.DOFade(1f, 0.3f);
             Sequence _sequence2 = DOTween.Sequence();
             _sequence2
@@ -60,6 +68,7 @@ public class sceneManager : MonoBehaviour {
                 .Append(topFader.DOFade(0.87f, 0.3f))
                 .OnComplete(() => load_Open(page));
         }
+        showAd(page);
     }
 
     public void load_Open(int page)
@@ -95,6 +104,23 @@ public class sceneManager : MonoBehaviour {
         _sequence2
             .Append(button.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.15f))
             .Append(button.transform.DOScale(new Vector3(1f, 1f, 1f), 0.15f));
+    }
+
+    /*Animations*/
+    public void responseEnable()
+    {
+        Sequence _sequence1 = DOTween.Sequence();
+        _sequence1
+            .Append(responseImage.DOFade(1, 1))
+            .Join(response_text.DOFade(1, 1));
+    }
+
+    public void responseDisable()
+    {
+        Sequence _sequence2 = DOTween.Sequence();
+        _sequence2.SetDelay(1.5f)
+            .Append(responseImage.DOFade(0, 1))
+            .Join(response_text.DOFade(0, 1));
     }
 
 }
