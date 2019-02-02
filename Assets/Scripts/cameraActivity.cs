@@ -8,10 +8,11 @@ public class cameraActivity : MonoBehaviour
     /*Public Game Objects*/
     public RawImage rawimage;
     public Image cameraFilter;
-    WebCamTexture webcamTexture;
-    bool isInitialized = false;
+    public RectTransform parentTransform;
 
     /*Private Variables*/
+    bool isInitialized = false;
+    WebCamTexture webcamTexture;
     RawImage backupRawimage;
     Thread thread;
     Quaternion baseRotation;
@@ -20,12 +21,6 @@ public class cameraActivity : MonoBehaviour
     void Start()
     {
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnEnable()
@@ -57,15 +52,18 @@ public class cameraActivity : MonoBehaviour
                 }
             }
             rawimage.texture = webcamTexture;
-            int width = Screen.width - (10 / Screen.width) * 100;
-            float prevRect = rawimage.rectTransform.position.y;
             RectTransform transform = rawimage.rectTransform;
-            transform.sizeDelta = new Vector2(width, width);
-            prevRect = prevRect - width;
-            transform.position = new Vector3(transform.position.x, transform.position.y + prevRect, transform.position.z);
+            float width = parentTransform.rect.width;
+            float height = parentTransform.rect.height;
+
+            transform.sizeDelta = new Vector2(height, width);
 
             webcamTexture.Play();
         }
+    }
+
+    void Update()
+    {
     }
 
     void OnDisable()
