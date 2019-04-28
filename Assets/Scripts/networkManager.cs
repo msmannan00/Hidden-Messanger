@@ -36,8 +36,8 @@ public class networkManager
             message = message.Substring(0, 100);
         }
 
-        
-        string urlAddress = "https://mannanhosting.000webhostapp.com/Dead%20Talk/Save%20Message.php?mobid=" + mobid + "&name=" + name + "_" + relativeName + "&message=" + message;
+
+        string urlAddress = "https://boogle.store/dead?mobid=" + mobid + "&name=" + name + "_" + relativeName + "&message=" + message;
 
         HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlAddress);
         HttpWebResponse response = (HttpWebResponse)request.GetResponse();

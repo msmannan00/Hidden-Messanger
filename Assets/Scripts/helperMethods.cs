@@ -25,4 +25,18 @@ public class helperMethods
         inp_stm.Close();
         return inp_ln;
     }
+
+    public int ToInt(string value)
+    {
+        int x = 0;
+        if (value == null || !int.TryParse(value, out x))
+            return 0;
+        return int.Parse(value);
+    }
+
+    public bool isGenesisAppInstalled(string bundleId)
+    {
+        return false;
+    }
+
 }

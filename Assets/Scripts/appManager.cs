@@ -7,7 +7,13 @@ public class appManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        adManager.sharedInstance().loadAdvertizement();        
+        StartCoroutine(startDelay());
+    }
+
+    IEnumerator startDelay()
+    {
+        yield return new WaitForSeconds(5);
+        prefManager.sharedInstance().loadPrefs();
     }
 
     // Update is called once per frame

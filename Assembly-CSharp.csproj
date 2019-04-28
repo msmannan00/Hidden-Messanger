@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\helperMethods.cs" />
      <Compile Include="Assets\Scripts\messageManager.cs" />
      <Compile Include="Assets\Scripts\networkManager.cs" />
+     <Compile Include="Assets\Scripts\prefManager.cs" />
      <Compile Include="Assets\Scripts\radarActivity.cs" />
      <Compile Include="Assets\Scripts\randomNumberActivity.cs" />
      <Compile Include="Assets\Scripts\randomWordActivity.cs" />
@@ -76,6 +77,8 @@
      <Compile Include="Assets\Scripts\Shareit.cs" />
      <Compile Include="Assets\Scripts\sleepManager.cs" />
      <Compile Include="Assets\Scripts\specialSymbolActivity.cs" />
+     <Compile Include="Assets\Scripts\staticAdManager.cs" />
+     <Compile Include="Assets\Scripts\statusManager.cs" />
      <Compile Include="Assets\Scripts\truthActivity.cs" />
      <Compile Include="Assets\Scripts\tweenManager.cs" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
