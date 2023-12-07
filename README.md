@@ -25,4 +25,4 @@ git clone https://github.com/msmannan00/hidden-messenger.git
 cd hidden-messenger
 
 # Open the Unity project in the Unity3D editor
-# Add any additional setup instructions
+# Switch android mode as this software only supports android at the moment
